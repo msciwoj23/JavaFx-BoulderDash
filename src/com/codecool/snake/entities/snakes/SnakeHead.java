@@ -40,8 +40,8 @@ public class SnakeHead extends GameEntity implements Animatable {
     public void move(double dir) {
         setRotate(dir);
         Point2D heading = Utils.directionToVector(dir, speed);
-        setX(getX() + heading.getX());
-        setY(getY() + heading.getY());
+        setX(getX() + 152 * heading.getX());
+        setY(getY() + 152 * heading.getY());
     }
 
     /*
@@ -52,15 +52,18 @@ public class SnakeHead extends GameEntity implements Animatable {
         if (Globals.leftKeyDown) {
             //dir = dir - turnRate;         disabled turning for trials
             dir = 270;
+            Globals.leftKeyDown = false;
             this.move(dir);
         }
         if (Globals.rightKeyDown) {
             //dir = dir + turnRate;
             dir = 90;
+            Globals.rightKeyDown = false;
             this.move(dir);
         }
         if (Globals.downKeyDown) {          // added for trials
             dir = 180;
+            Globals.downKeyDown = false;
             this.move(dir);
         }
 

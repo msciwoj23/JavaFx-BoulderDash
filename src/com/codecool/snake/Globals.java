@@ -17,7 +17,7 @@ public class Globals {
     public static Image snakeHead = new Image("snake_head.png");
     public static Image snakeBody = new Image("snake_body.png");
     public static Image simpleEnemy = new Image("simple_enemy.png");
-    public static Image powerupBerry = new Image("powerup_berry.png");
+    public static Image powerupBerry = new Image("pixil-frame-0(2).png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;

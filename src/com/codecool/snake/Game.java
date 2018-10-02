@@ -24,10 +24,10 @@ public class Game extends Pane {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 new SimplePowerup(this, myXc , myYc);
-                myXc += 60;
+                myXc += 40;
             }
             myXc = 100;
-            myYc += 60;
+            myYc += 40;
         }
 
 
