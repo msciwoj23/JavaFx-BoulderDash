@@ -13,13 +13,26 @@ public class Player extends GameEntity implements Animatable {
 //    private static final float turnRate = 2;
 //    private GameEntity tail; // the last element. Needed to know where to add the next part.
 //    private int health;
-    private int stepMove = 40;
 
+    private char movementDirection;
+    private boolean keyPossesed = false;
+
+    public char getMovementDirection() {
+        return movementDirection;
+    }
+
+    public void setKeyPossesed(boolean keyPossesed) {
+        this.keyPossesed = keyPossesed;
+    }
+
+    public boolean isKeyPossesed() {
+        return keyPossesed;
+    }
 
     /*
-    so: Game is instantiated in Main.start() ,
-    When Game is instantiated in its constructor instantiates some game entities Player included.
-     */
+            so: Game is instantiated in Main.start() ,
+            When Game is instantiated in its constructor instantiates some game entities Player included.
+             */
     public Player(Pane pane, int xc, int yc) {
         super(pane);        // this calls superclass constructor and triggers [Globals.addGameObject(this);] within
         setX(xc);
@@ -37,18 +50,32 @@ public class Player extends GameEntity implements Animatable {
     added my own method so Player moves only if key pressed
      */
     public void moveRight() {
-
-        setX(getX() + stepMove);
+        this.movementDirection = 'r';
+        System.out.println(this.movementDirection);
+        setX(getX() + Globals.stepMove);
     }
 
     public void moveLeft() {
-
-        setX(getX() - stepMove);
+        this.movementDirection = 'l';
+        System.out.println(this.movementDirection);
+        setX(getX() - Globals.stepMove);
     }
 
     public void moveDown() {
+        this.movementDirection = 'd';
+        System.out.println(this.movementDirection);
+        setY(getY() + Globals.stepMove);
+    }
 
-        setY(getY() + stepMove);
+    public void reverse() {
+        System.out.println(this.movementDirection);
+        if (this.movementDirection == 'r') {
+            this.moveLeft();
+        } else if (this.movementDirection == 'l') {
+            this.moveRight();
+        } else if (this.movementDirection == 'd') {
+            setY(getY() - Globals.stepMove);
+        }
     }
 
     /*
@@ -81,7 +108,7 @@ public class Player extends GameEntity implements Animatable {
         // check if collided with an enemy or a powerup
         for (GameEntity entity : Globals.getGameObjects()) {
             if (getBoundsInParent().intersects(entity.getBoundsInParent())) {
-                if (entity instanceof Interactable) {   // each Animatable has apply() method called on collision
+                if (entity instanceof Interactable) {   // each Interactable has apply() method called on collision
                     Interactable interactable = (Interactable) entity;
                     interactable.apply(this);
                     System.out.println(interactable.getMessage());

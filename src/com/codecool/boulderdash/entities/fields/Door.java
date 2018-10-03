@@ -19,7 +19,14 @@ public class Door extends GameEntity implements Interactable {
 
     @Override
     public void apply(Player player) {
-        destroy();
+        if (player.isKeyPossesed()) {
+            destroy();
+            System.out.println("YES!");
+        } else {
+            player.reverse();
+        }
+
+
     }
 
     @Override

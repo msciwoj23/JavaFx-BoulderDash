@@ -21,7 +21,7 @@ public class Game extends Pane {
         for (int it = 0; it < Globals.levelPattern.length; it++) {
             for (char ch : Globals.levelPattern[it].toCharArray()) {
                 if (ch == ' ') {
-                    continue;
+                    //continue;
                 } else if (ch == 'd') {
                     new Diamond(this, myXc , myYc);
                 } else if (ch == 'k') {

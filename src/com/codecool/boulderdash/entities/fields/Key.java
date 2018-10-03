@@ -19,6 +19,7 @@ public class Key extends GameEntity implements Interactable {
 
     @Override
     public void apply(Player player) {
+        player.setKeyPossesed(true);
         destroy();
     }
 

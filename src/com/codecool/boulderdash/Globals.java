@@ -13,16 +13,18 @@ public class Globals {
     public static final double WINDOW_WIDTH = 800;
     public static final double WINDOW_HEIGHT = 800;
 
+    public static final int stepMove = 40;
+
 
     public static String[] levelPattern = {
-            "ggddssgggggggggggggggggg",
-            "ggddssgggggggggggggggggg",
-            "ggddssgggggggggggggggggg",
-            "ggddssggggggggggggkggggg",
-            "ggddssgggggggggggggggggg",
-            "ggddssgggggggggggggggggg",
-            "ggddssgggggggggggggggggg",
-            "ggddssggggggggggggXggggg"
+            "ggggggggggggggg",
+            "ggg  s  s     g",
+            "ggg gggggXggggk",
+            "ggg ggggggggggg",
+            "ggggggggggggggg",
+            "ggggggggggggggg",
+            "ggggggggggggggg",
+            "ggggggggggggggg"
     };
 
     public static Image player = new Image("DiggerRight.png",38,38,true,true);

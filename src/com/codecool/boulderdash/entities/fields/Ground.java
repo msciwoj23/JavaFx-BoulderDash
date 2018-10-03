@@ -28,6 +28,7 @@ public class Ground extends GameEntity implements Interactable {
         destroy();
     }
 
+    
     @Override
     public String getMessage() {
         return "Got power-up :)";
