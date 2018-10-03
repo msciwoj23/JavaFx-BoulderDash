@@ -6,10 +6,10 @@ import com.codecool.boulderdash.entities.Interactable;
 import com.codecool.boulderdash.entities.player.Player;
 import javafx.scene.layout.Pane;
 
-public class Stone extends GameEntity implements Interactable {
-    public Stone(Pane pane, int xc, int yc) {
+public class Key extends GameEntity implements Interactable {
+    public Key (Pane pane, int xc, int yc) {
         super(pane);
-        setImage(Globals.stone);
+        setImage(Globals.key);
         pane.getChildren().add(this);
 
         setX(xc);
@@ -24,6 +24,6 @@ public class Stone extends GameEntity implements Interactable {
 
     @Override
     public String getMessage() {
-        return "Got stone :)";
+        return "Got key :)";
     }
 }

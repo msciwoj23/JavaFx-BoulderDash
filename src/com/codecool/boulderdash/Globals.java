@@ -18,11 +18,11 @@ public class Globals {
             "ggddssgggggggggggggggggg",
             "ggddssgggggggggggggggggg",
             "ggddssgggggggggggggggggg",
+            "ggddssggggggggggggkggggg",
             "ggddssgggggggggggggggggg",
             "ggddssgggggggggggggggggg",
             "ggddssgggggggggggggggggg",
-            "ggddssgggggggggggggggggg",
-            "ggddssgggggggggggggggggg"
+            "ggddssggggggggggggXggggg"
     };
 
     public static Image player = new Image("DiggerRight.png",38,38,true,true);
@@ -30,6 +30,8 @@ public class Globals {
     public static Image ground = new Image("RockyGround.png");
     public static Image diamond = new Image("Diamond.png");
     public static Image stone = new Image("Stone.png");
+    public static Image door = new Image("Door.png");
+    public static Image key = new Image("Key.png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;

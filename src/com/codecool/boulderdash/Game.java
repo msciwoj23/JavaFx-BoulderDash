@@ -4,6 +4,8 @@ import com.codecool.boulderdash.entities.fields.Diamond;
 import com.codecool.boulderdash.entities.fields.Ground;
 import com.codecool.boulderdash.entities.fields.Stone;
 import com.codecool.boulderdash.entities.player.Player;
+import com.codecool.boulderdash.entities.fields.Door;
+import com.codecool.boulderdash.entities.fields.Key;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
@@ -22,6 +24,10 @@ public class Game extends Pane {
                     continue;
                 } else if (ch == 'd') {
                     new Diamond(this, myXc , myYc);
+                } else if (ch == 'k') {
+                    new Key(this, myXc , myYc);
+                } else if (ch == 'X') {
+                    new Door(this, myXc , myYc);
                 } else if (ch == 's') {
                     new Stone(this, myXc , myYc);
                 } else {
