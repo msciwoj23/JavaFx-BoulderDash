@@ -1,7 +1,6 @@
-package com.codecool.snake;
+package com.codecool.boulderdash;
 
-import com.codecool.snake.entities.GameEntity;
-import com.codecool.snake.entities.snakes.SnakeHead;
+import com.codecool.boulderdash.entities.GameEntity;
 import javafx.scene.image.Image;
 
 import java.util.Collections;
@@ -14,10 +13,9 @@ public class Globals {
     public static final double WINDOW_WIDTH = 800;
     public static final double WINDOW_HEIGHT = 800;
 
-    public static Image snakeHead = new Image("DiggerRight.png",38,38,true,true);
-    public static Image snakeBody = new Image("snake_body.png");
+    public static Image player = new Image("DiggerRight.png",38,38,true,true);
     public static Image simpleEnemy = new Image("simple_enemy.png");
-    public static Image powerupBerry = new Image("RockyGround.png");
+    public static Image ground = new Image("RockyGround.png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;

@@ -1,15 +1,14 @@
-package com.codecool.snake;
+package com.codecool.boulderdash;
 
-import com.codecool.snake.entities.enemies.SimpleEnemy;
-import com.codecool.snake.entities.powerups.SimplePowerup;
-import com.codecool.snake.entities.snakes.SnakeHead;
+import com.codecool.boulderdash.entities.fields.Ground;
+import com.codecool.boulderdash.entities.player.Player;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 public class Game extends Pane {
 
     public Game() {
-        new SnakeHead(this, 101, 61);
+        new Player(this, 101, 61);
 
 
 
@@ -19,18 +18,12 @@ public class Game extends Pane {
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                new SimplePowerup(this, myXc , myYc);
+                new Ground(this, myXc , myYc);
                 myXc += 40;
             }
             myXc = 100;
             myYc += 40;
         }
-
-
-//        new SimplePowerup(this);
-//        new SimplePowerup(this);
-//        new SimplePowerup(this);
-//        new SimplePowerup(this);
     }
 
 

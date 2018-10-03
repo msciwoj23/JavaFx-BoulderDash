@@ -1,4 +1,4 @@
-package com.codecool.snake;
+package com.codecool.boulderdash;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -20,7 +20,7 @@ public class Main extends Application {
         Game game = new Game();
         game.setStyle("-fx-background-color: gray");
                                     // ok so Game is instantiated to put it in place of root in new Scene
-        primaryStage.setTitle("Snake Game");
+        primaryStage.setTitle("Boulder Dash");
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
         primaryStage.show();
         game.start();               // and to call its start method

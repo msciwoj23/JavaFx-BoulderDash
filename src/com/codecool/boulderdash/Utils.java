@@ -1,4 +1,4 @@
-package com.codecool.snake;
+package com.codecool.boulderdash;
 
 import javafx.geometry.Point2D;
 

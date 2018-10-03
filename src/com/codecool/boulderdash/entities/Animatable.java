@@ -1,4 +1,4 @@
-package com.codecool.snake.entities;
+package com.codecool.boulderdash.entities;
 
 // Interface for animated game entities. If a GameEntity implements this, the step() method will be called
 // 60 times per second.

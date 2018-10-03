@@ -1,7 +1,7 @@
-package com.codecool.snake;
+package com.codecool.boulderdash;
 
-import com.codecool.snake.entities.GameEntity;
-import com.codecool.snake.entities.Animatable;
+import com.codecool.boulderdash.entities.GameEntity;
+import com.codecool.boulderdash.entities.Animatable;
 import javafx.animation.AnimationTimer;
 
 public class GameLoop extends AnimationTimer {

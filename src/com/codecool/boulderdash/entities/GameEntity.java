@@ -1,6 +1,6 @@
-package com.codecool.snake.entities;
+package com.codecool.boulderdash.entities;
 
-import com.codecool.snake.Globals;
+import com.codecool.boulderdash.Globals;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
