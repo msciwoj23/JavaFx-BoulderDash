@@ -1,7 +1,6 @@
 package com.codecool.snake;
 
 import com.codecool.snake.entities.GameEntity;
-import com.codecool.snake.entities.snakes.SnakeHead;
 import javafx.scene.image.Image;
 
 import java.util.Collections;
@@ -18,6 +17,8 @@ public class Globals {
     public static Image snakeBody = new Image("snake_body.png");
     public static Image simpleEnemy = new Image("simple_enemy.png");
     public static Image powerupBerry = new Image("pixil-frame-0(2).png");
+    public static Image powerupDiamond = new Image("Diamond.png");
+    public static Image powerupStone = new Image("Stone.png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;

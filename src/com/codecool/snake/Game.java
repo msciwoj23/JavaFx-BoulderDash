@@ -1,15 +1,16 @@
 package com.codecool.snake;
 
-import com.codecool.snake.entities.enemies.SimpleEnemy;
+import com.codecool.snake.entities.powerups.Diamond;
+import com.codecool.snake.entities.powerups.Stone;
 import com.codecool.snake.entities.powerups.SimplePowerup;
-import com.codecool.snake.entities.snakes.SnakeHead;
+import com.codecool.snake.entities.snakes.Player;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 public class Game extends Pane {
 
     public Game() {
-        new SnakeHead(this, 100, 40);
+        new Player(this, 100, 40);
 
 //        new SimpleEnemy(this);
 //        new SimpleEnemy(this);
@@ -18,12 +19,19 @@ public class Game extends Pane {
 
 
         // this is what I injected
+
+
         int myXc = 100;
         int myYc = 100;
-
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                new SimplePowerup(this, myXc , myYc);
+                if (j == 4) {
+                    new Diamond(this, myXc , myYc);
+                } else if (j == 6) {
+                    new Stone(this, myXc , myYc);
+                } else {
+                    new SimplePowerup(this, myXc, myYc);
+                }
                 myXc += 40;
             }
             myXc = 100;
