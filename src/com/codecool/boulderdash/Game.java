@@ -10,16 +10,15 @@ import javafx.scene.layout.Pane;
 public class Game extends Pane {
 
     public Game() {
-        int firstFieldFromTop = 0;
+        new Player(this, 1 , 1);
+        int firstFieldFromTop = 40;
         int firstFieldFromLeft = 0;
 
         int myXc = firstFieldFromLeft;
         int myYc = firstFieldFromTop;
         for (int it = 0; it < Globals.levelPattern.length; it++) {
             for (char ch : Globals.levelPattern[it].toCharArray()) {
-                if (ch == 'p') {
-                    new Player(this, myXc , myYc);
-                } else if (ch == ' ') {
+                if (ch == ' ') {
                     continue;
                 } else if (ch == 'd') {
                     new Diamond(this, myXc , myYc);

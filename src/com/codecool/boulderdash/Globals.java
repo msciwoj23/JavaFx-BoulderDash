@@ -15,11 +15,14 @@ public class Globals {
 
 
     public static String[] levelPattern = {
-            "p               ",
-            "ggddssgggggggggg",
-            "ggddssgggggggggg",
-            "ggddssgggggggggg",
-            "ggddssgggggggggg"
+            "ggddssgggggggggggggggggg",
+            "ggddssgggggggggggggggggg",
+            "ggddssgggggggggggggggggg",
+            "ggddssgggggggggggggggggg",
+            "ggddssgggggggggggggggggg",
+            "ggddssgggggggggggggggggg",
+            "ggddssgggggggggggggggggg",
+            "ggddssgggggggggggggggggg"
     };
 
     public static Image player = new Image("DiggerRight.png",38,38,true,true);
