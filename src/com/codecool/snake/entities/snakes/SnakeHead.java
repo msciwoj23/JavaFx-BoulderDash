@@ -6,15 +6,15 @@ import com.codecool.snake.entities.Animatable;
 import com.codecool.snake.Utils;
 import com.codecool.snake.entities.Interactable;
 import javafx.geometry.Point2D;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 
 public class SnakeHead extends GameEntity implements Animatable {
 
-    private static final float speed = 0.4f;
+    private static final double speed = 0.3;
     private static final float turnRate = 2;
     private GameEntity tail; // the last element. Needed to know where to add the next part.
     private int health;
-
 
 
     /*
@@ -37,41 +37,47 @@ public class SnakeHead extends GameEntity implements Animatable {
     /*
     added my own method so SnakeHead moves only if key pressed
      */
-    public void move(double dir) {
-        setRotate(dir);
-        Point2D heading = Utils.directionToVector(dir, speed);
-        setX(getX() + 152 * heading.getX());
-        setY(getY() + 152 * heading.getY());
+    public void moveRight() {
+//
+        setX(getX() + 40);
+//
+    }
+
+    public void moveLeft() {
+
+        setX(getX() - 40);
+    }
+
+    public void moveDown() {
+
+        setY(getY() + 40);
     }
 
     /*
     ok so: I can not find the source of getRotate() and setRotate()
      */
     public void step() {                // step is called in GameLoop in handle
-        double dir = getRotate();       // great. i cant find source of getRotate() method.
+             // great. i cant find source of getRotate() method.
         if (Globals.leftKeyDown) {
-            //dir = dir - turnRate;         disabled turning for trials
-            dir = 270;
+
             Globals.leftKeyDown = false;
-            this.move(dir);
-        }
-        if (Globals.rightKeyDown) {
-            //dir = dir + turnRate;
-            dir = 90;
-            Globals.rightKeyDown = false;
-            this.move(dir);
-        }
-        if (Globals.downKeyDown) {          // added for trials
-            dir = 180;
-            Globals.downKeyDown = false;
-            this.move(dir);
+            Globals.snakeHead = new Image("DiggerLeft.png",38,38,true,true);
+            setImage(Globals.snakeHead);
+            this.moveLeft();
         }
 
-        // set rotation and position            // again don't know where setRotate() came from
-//        setRotate(dir);                                                disabled for trials
-//        Point2D heading = Utils.directionToVector(dir, speed);
-//        setX(getX() + heading.getX());
-//        setY(getY() + heading.getY());
+        if (Globals.rightKeyDown) {
+
+            Globals.rightKeyDown = false;
+
+            Globals.snakeHead = new Image("DiggerRight.png",38,38,true,true);
+            setImage(Globals.snakeHead);
+            this.moveRight();
+        }
+        if (Globals.downKeyDown) {          // added for trials
+            Globals.downKeyDown = false;
+            this.moveDown();
+        }
 
         // check if collided with an enemy or a powerup
         for (GameEntity entity : Globals.getGameObjects()) {
@@ -90,15 +96,6 @@ public class SnakeHead extends GameEntity implements Animatable {
             Globals.gameLoop.stop();
         }
     }
-
-    public void addPart(int numParts) {
-        for (int i = 0; i < numParts; i++) {
-            SnakeBody newPart = new SnakeBody(pane, tail);
-            tail = newPart;
-        }
-    }
-
-    public void changeHealth(int diff) {
-        health += diff;
-    }
 }
+
+

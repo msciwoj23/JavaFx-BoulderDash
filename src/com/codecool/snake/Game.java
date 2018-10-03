@@ -9,12 +9,8 @@ import javafx.scene.layout.Pane;
 public class Game extends Pane {
 
     public Game() {
-        new SnakeHead(this, 100, 40);
+        new SnakeHead(this, 101, 61);
 
-//        new SimpleEnemy(this);
-//        new SimpleEnemy(this);
-//        new SimpleEnemy(this);
-//        new SimpleEnemy(this);
 
 
         // this is what I injected

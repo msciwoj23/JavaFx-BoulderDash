@@ -14,10 +14,10 @@ public class Globals {
     public static final double WINDOW_WIDTH = 800;
     public static final double WINDOW_HEIGHT = 800;
 
-    public static Image snakeHead = new Image("snake_head.png");
+    public static Image snakeHead = new Image("DiggerRight.png",38,38,true,true);
     public static Image snakeBody = new Image("snake_body.png");
     public static Image simpleEnemy = new Image("simple_enemy.png");
-    public static Image powerupBerry = new Image("pixil-frame-0(2).png");
+    public static Image powerupBerry = new Image("RockyGround.png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;
