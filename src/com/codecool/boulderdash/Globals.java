@@ -13,6 +13,15 @@ public class Globals {
     public static final double WINDOW_WIDTH = 800;
     public static final double WINDOW_HEIGHT = 800;
 
+
+    public static String[] levelPattern = {
+            "p               ",
+            "ggddssgggggggggg",
+            "ggddssgggggggggg",
+            "ggddssgggggggggg",
+            "ggddssgggggggggg"
+    };
+
     public static Image player = new Image("DiggerRight.png",38,38,true,true);
     public static Image simpleEnemy = new Image("simple_enemy.png");
     public static Image ground = new Image("RockyGround.png");

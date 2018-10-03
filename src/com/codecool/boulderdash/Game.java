@@ -10,30 +10,30 @@ import javafx.scene.layout.Pane;
 public class Game extends Pane {
 
     public Game() {
-        new Player(this, 101, 61);
+        int firstFieldFromTop = 0;
+        int firstFieldFromLeft = 0;
 
-
-
-        // this is what I injected
-        int myXc = 100;
-        int myYc = 100;
-
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (j == 2) {
+        int myXc = firstFieldFromLeft;
+        int myYc = firstFieldFromTop;
+        for (int it = 0; it < Globals.levelPattern.length; it++) {
+            for (char ch : Globals.levelPattern[it].toCharArray()) {
+                if (ch == 'p') {
+                    new Player(this, myXc , myYc);
+                } else if (ch == ' ') {
+                    continue;
+                } else if (ch == 'd') {
                     new Diamond(this, myXc , myYc);
-                } else if ( j == 4) {
+                } else if (ch == 's') {
                     new Stone(this, myXc , myYc);
                 } else {
                     new Ground(this, myXc , myYc);
                 }
                 myXc += 40;
             }
-            myXc = 100;
+            myXc = firstFieldFromLeft;
             myYc += 40;
         }
     }
-
 
     /*
     this is called in Main
