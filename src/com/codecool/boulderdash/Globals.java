@@ -16,6 +16,8 @@ public class Globals {
     public static Image player = new Image("DiggerRight.png",38,38,true,true);
     public static Image simpleEnemy = new Image("simple_enemy.png");
     public static Image ground = new Image("RockyGround.png");
+    public static Image diamond = new Image("Diamond.png");
+    public static Image stone = new Image("Stone.png");
     //.. put here the other images you want to use
 
     public static boolean leftKeyDown;

@@ -1,6 +1,8 @@
 package com.codecool.boulderdash;
 
+import com.codecool.boulderdash.entities.fields.Diamond;
 import com.codecool.boulderdash.entities.fields.Ground;
+import com.codecool.boulderdash.entities.fields.Stone;
 import com.codecool.boulderdash.entities.player.Player;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -18,7 +20,13 @@ public class Game extends Pane {
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                new Ground(this, myXc , myYc);
+                if (j == 2) {
+                    new Diamond(this, myXc , myYc);
+                } else if ( j == 4) {
+                    new Stone(this, myXc , myYc);
+                } else {
+                    new Ground(this, myXc , myYc);
+                }
                 myXc += 40;
             }
             myXc = 100;
