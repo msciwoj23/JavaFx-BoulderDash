@@ -23,6 +23,7 @@ public class Game extends Pane {
                 if (ch == ' ') {
                     //continue;
                 } else if (ch == 'd') {
+                    Globals.diamondCounter++;
                     new Diamond(this, myXc , myYc);
                 } else if (ch == 'k') {
                     new Key(this, myXc , myYc);
@@ -38,6 +39,7 @@ public class Game extends Pane {
             myXc = firstFieldFromLeft;
             myYc += 40;
         }
+        System.out.println(Globals.diamondCounter);
     }
 
     /*

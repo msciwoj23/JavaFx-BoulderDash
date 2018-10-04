@@ -19,6 +19,7 @@ public class Diamond extends GameEntity implements Interactable {
 
     @Override
     public void apply(Player player) {
+        Globals.diamondsInPocket++;
         destroy();
     }
 

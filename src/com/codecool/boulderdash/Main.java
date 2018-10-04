@@ -2,6 +2,7 @@ package com.codecool.boulderdash;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -23,6 +24,9 @@ public class Main extends Application {
         primaryStage.setTitle("Boulder Dash");
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
         primaryStage.setFullScreen(true);
+        Label endGame = new Label();
+        endGame.setId("endGame");
+        game.getChildren().add(endGame);
         primaryStage.show();
         game.start();               // and to call its start method
     }

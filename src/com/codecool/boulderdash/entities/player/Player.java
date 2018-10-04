@@ -4,6 +4,9 @@ import com.codecool.boulderdash.entities.GameEntity;
 import com.codecool.boulderdash.Globals;
 import com.codecool.boulderdash.entities.Animatable;
 import com.codecool.boulderdash.entities.Interactable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 
@@ -132,10 +135,15 @@ public class Player extends GameEntity implements Animatable {
         }
 
         // check for game over condition
-        if (isOutOfBounds()) {
-            System.out.println("Game Over");
-            Globals.gameLoop.stop();
-        }
+        if(Globals.diamondCounter == Globals.diamondsInPocket){
+                Scene scene = getScene();
+                Node endGameId = ((Scene) scene).lookup("#endgame");
+                Label endGameLabel = (Label) endGameId;
+                System.out.println("Game Over");
+                endGameLabel.setText("JOB DONE!!!");
+                Globals.gameLoop.stop();
+
+            }
     }
 }
 

@@ -14,6 +14,9 @@ public class Globals {
     public static final double WINDOW_HEIGHT = 768;
 
     public static final int stepMove = 40;
+    public static int diamondCounter;
+
+    public static int diamondsInPocket;
 
 
     public static String[] levelPattern = {
