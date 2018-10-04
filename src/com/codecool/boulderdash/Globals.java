@@ -10,21 +10,31 @@ import java.util.List;
 // class for holding all static stuff
 public class Globals {
 
-    public static final double WINDOW_WIDTH = 800;
-    public static final double WINDOW_HEIGHT = 800;
+    public static final double WINDOW_WIDTH = 1360;
+    public static final double WINDOW_HEIGHT = 768;
 
     public static final int stepMove = 40;
 
 
     public static String[] levelPattern = {
-            "ggggggggggggggg",
-            "ggg  s  s     g",
-            "ggg gggggXggggk",
-            "ggg ggggggggggg",
-            "ggggggggggggggg",
-            "ggggggggggggggg",
-            "ggggggggggggggg",
-            "ggggggggggggggg"
+            "ggggggggggggggggggggsggggggggggggs",
+            "ggggggsgsggggggggggdgggsgggsgggggs",
+            "gggsssgggggggggggggggggggggggggggs",
+            "ggsgggggggggggdggggggggsgggsgggggs",
+            "gggsgggggsggsggggsgggggggggggggggs",
+            "ggsdggsgggggggggggggggdsgggsgggggs",
+            "ggggggggsgggsggggggggggsgggsgggggs",
+            "ggsgggggggggsgggggggsggsgggsgggggs",
+            "ggggggggggggsgdgggggssssssssssssss",
+            "ggggggggsgggsgsgggggsggsgggsgggggs",
+            "ggggkgggggggggggggggsggsgggsggddgs",
+            "ggggggggsgggggggggggsggsgggsggddgs",
+            "ggggggggggggggggggggsgdgggggggddgs",
+            "ggggggggggggggggggggsggsgggsggddgs",
+            "ggggggggggggggggggggsggsgggsgggggs",
+            "ggggggggggggggggggggsggsgggsgggggs",
+            "gdggggssssggggggggggXggsgggsgggggs",
+            "ssssssssssssssssssssssssssssssssss"
     };
 
     public static Image player = new Image("DiggerRight.png",38,38,true,true);
@@ -39,6 +49,7 @@ public class Globals {
     public static boolean leftKeyDown;
     public static boolean rightKeyDown;
     public static boolean downKeyDown;
+    public static boolean upKeyDown;
     public static List<GameEntity> gameObjects;
     public static List<GameEntity> newGameObjects; // Holds game objects crated in this frame.
     public static List<GameEntity> oldGameObjects; // Holds game objects that will be destroyed this frame.

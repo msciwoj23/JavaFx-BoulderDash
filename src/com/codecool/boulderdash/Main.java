@@ -22,6 +22,7 @@ public class Main extends Application {
                                     // ok so Game is instantiated to put it in place of root in new Scene
         primaryStage.setTitle("Boulder Dash");
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
+        primaryStage.setFullScreen(true);
         primaryStage.show();
         game.start();               // and to call its start method
     }

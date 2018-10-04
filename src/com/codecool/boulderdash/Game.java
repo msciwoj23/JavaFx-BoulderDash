@@ -50,6 +50,7 @@ public class Game extends Pane {
                 case LEFT:  Globals.leftKeyDown  = true; break;
                 case RIGHT: Globals.rightKeyDown  = true; break;
                 case DOWN: Globals.downKeyDown = true; break;
+                case UP: Globals.upKeyDown = true; break;
             }
         });
 
@@ -58,6 +59,7 @@ public class Game extends Pane {
                 case LEFT:  Globals.leftKeyDown  = false; break;
                 case RIGHT: Globals.rightKeyDown  = false; break;
                 case DOWN: Globals.downKeyDown = false; break;
+                case UP: Globals.upKeyDown = false; break;
             }
         });
         /*

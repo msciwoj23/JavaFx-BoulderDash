@@ -67,6 +67,13 @@ public class Player extends GameEntity implements Animatable {
         setY(getY() + Globals.stepMove);
     }
 
+    public void moveUp() {
+        this.movementDirection = 'u';
+        System.out.println(this.movementDirection);
+        setY(getY() - Globals.stepMove);
+    }
+
+
     public void reverse() {
         System.out.println(this.movementDirection);
         if (this.movementDirection == 'r') {
@@ -74,7 +81,9 @@ public class Player extends GameEntity implements Animatable {
         } else if (this.movementDirection == 'l') {
             this.moveRight();
         } else if (this.movementDirection == 'd') {
-            setY(getY() - Globals.stepMove);
+            this.moveUp();
+        } else if (this.movementDirection == 'u') {
+            this.moveDown();
         }
     }
 
@@ -103,6 +112,12 @@ public class Player extends GameEntity implements Animatable {
 
             Globals.downKeyDown = false;
             this.moveDown();
+        }
+
+        if (Globals.upKeyDown) {          // added for trials
+
+            Globals.upKeyDown = false;
+            this.moveUp();
         }
 
         // check if collided with an enemy or a powerup
