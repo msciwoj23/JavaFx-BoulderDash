@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.scene.text.Font;
+import javafx.scene.paint.Color;
 
 public class Main extends Application {
 
@@ -25,6 +27,10 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(game, Globals.WINDOW_WIDTH, Globals.WINDOW_HEIGHT));
         primaryStage.setFullScreen(true);
         Label endGame = new Label();
+        endGame.setFont(new Font(100));
+        endGame.setTextFill(Color.web("rgb(255,255,0)"));
+        endGame.setTranslateX(450);
+        endGame.setTranslateY(300);
         endGame.setId("endGame");
         game.getChildren().add(endGame);
         primaryStage.show();

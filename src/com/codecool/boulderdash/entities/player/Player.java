@@ -137,10 +137,10 @@ public class Player extends GameEntity implements Animatable {
         // check for game over condition
         if(Globals.diamondCounter == Globals.diamondsInPocket){
                 Scene scene = getScene();
-                Node endGameId = ((Scene) scene).lookup("#endgame");
+                Node endGameId = ((Scene) scene).lookup("#endGame");
                 Label endGameLabel = (Label) endGameId;
                 System.out.println("Game Over");
-                endGameLabel.setText("JOB DONE!!!");
+                endGameLabel.setText("To be continued...");
                 Globals.gameLoop.stop();
 
             }
